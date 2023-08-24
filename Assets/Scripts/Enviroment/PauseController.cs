@@ -23,5 +23,5 @@ public class PauseController : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToKill);
         StopGame();
-    }
+    } 
 }

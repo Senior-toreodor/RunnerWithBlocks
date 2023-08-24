@@ -30,12 +30,12 @@ public class GenerateLevel : MonoBehaviour
 
     private IEnumerator moveToDesignatedPosition(Vector3 destination, GameObject objectToAscend)
     {
-        float SpeedOfAscending = 0.4f;
+        float SpeedOfAscending = 100f;
         while (true)
         { 
             if (objectToAscend.transform.position == destination)
                 break;
-            objectToAscend.transform.position = Vector3.MoveTowards(objectToAscend.transform.position, destination, SpeedOfAscending);
+            objectToAscend.transform.position = Vector3.MoveTowards(objectToAscend.transform.position, destination, SpeedOfAscending * Time.deltaTime);
             yield return null;
         }
     } 

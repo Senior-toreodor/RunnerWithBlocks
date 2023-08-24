@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class TriggerHandler : MonoBehaviour
 {
-    public GameObject sectionGenerator;
+    public GameObject sectionGenerator; 
     private void OnTriggerEnter(Collider other)
-    { 
-        if (other.name != "Stickman") return; 
-        sectionGenerator.GetComponent<GenerateLevel>().GenerateSection(); 
+    {
+        if (other.name == "Stickman") 
+        {
+            sectionGenerator.GetComponent<GenerateLevel>().GenerateSection();
+        }  
     }
 
 }
